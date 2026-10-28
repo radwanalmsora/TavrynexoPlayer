@@ -15,9 +15,6 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Set up Ninja and CMake
-      uses: seanmcelroy/setup-ninja@v1.0.3
-
     - name: Setup MSVC Compiler
       uses: ilammy/msvc-dev-cmd@v1
 
@@ -30,27 +27,21 @@ jobs:
         arch: 'win64_msvc2019_64'
         modules: 'qtquickcontrols2'
 
-    - name: Install Vulkan SDK
-      uses: humbletim/setup-vulkan-sdk@v1.2.0
-      with:
-        vulkan-query-version: 1.3.268.0
-        vulkan-components: Vulkan-Headers, Vulkan-Loader
-
-    - name: Configure CMake
+    - name: Configure CMake (Visual Studio 2022)
       run: |
-        cmake -B build -S TavrynexoPlayer -G "Ninja" `
+        cmake -B build -S TavrynexoPlayer -G "Visual Studio 17 2022" -A x64 `
           -DCMAKE_BUILD_TYPE=Release `
           -DCMAKE_PREFIX_PATH="${{ env.Qt6_DIR }}"
 
     - name: Build TavrynexoPlayer.exe
       run: |
-        cmake --build build --config Release
+        cmake --build build --config Release --parallel
 
     - name: Package Standalone Deployment (windeployqt)
       run: |
         mkdir dist
-        copy build\TavrynexoPlayer.exe dist\
-        windeployqt --qmldir TavrynexoPlayer\qml --release --no-translations dist\TavrynexoPlayer.exe
+        copy build\Release\TavrynexoPlayer.exe dist\
+        & "${{ env.Qt6_DIR }}\bin\windeployqt.exe" --qmldir TavrynexoPlayer\qml --release --no-translations dist\TavrynexoPlayer.exe
 
     - name: Upload Standalone EXE Package
       uses: actions/upload-artifact@v4
