@@ -1,15 +1,22 @@
-# Tavrynexo Player - FFmpeg Finder Module
-find_path(AVCODEC_INCLUDE_DIR libavcodec/avcodec.h)
-find_path(AVFORMAT_INCLUDE_DIR libavformat/avformat.h)
-find_path(AVUTIL_INCLUDE_DIR libavutil/avutil.h)
-find_path(SWSCALE_INCLUDE_DIR libswscale/swscale.h)
-find_path(SWRESAMPLE_INCLUDE_DIR libswresample/swresample.h)
+# Tavrynexo Player - Robust FFmpeg Finder
+set(FFMPEG_SEARCH_PATHS
+    ${FFMPEG_ROOT}
+    $ENV{FFMPEG_DIR}
+    "C:/ffmpeg"
+    "C:/ffmpeg/ffmpeg-master-latest-win64-gpl-shared"
+)
 
-find_library(AVCODEC_LIBRARY NAMES avcodec)
-find_library(AVFORMAT_LIBRARY NAMES avformat)
-find_library(AVUTIL_LIBRARY NAMES avutil)
-find_library(SWSCALE_LIBRARY NAMES swscale)
-find_library(SWRESAMPLE_LIBRARY NAMES swresample)
+find_path(AVCODEC_INCLUDE_DIR libavcodec/avcodec.h PATHS ${FFMPEG_SEARCH_PATHS} PATH_SUFFIXES include)
+find_path(AVFORMAT_INCLUDE_DIR libavformat/avformat.h PATHS ${FFMPEG_SEARCH_PATHS} PATH_SUFFIXES include)
+find_path(AVUTIL_INCLUDE_DIR libavutil/avutil.h PATHS ${FFMPEG_SEARCH_PATHS} PATH_SUFFIXES include)
+find_path(SWSCALE_INCLUDE_DIR libswscale/swscale.h PATHS ${FFMPEG_SEARCH_PATHS} PATH_SUFFIXES include)
+find_path(SWRESAMPLE_INCLUDE_DIR libswresample/swresample.h PATHS ${FFMPEG_SEARCH_PATHS} PATH_SUFFIXES include)
+
+find_library(AVCODEC_LIBRARY NAMES avcodec PATHS ${FFMPEG_SEARCH_PATHS} PATH_SUFFIXES lib)
+find_library(AVFORMAT_LIBRARY NAMES avformat PATHS ${FFMPEG_SEARCH_PATHS} PATH_SUFFIXES lib)
+find_library(AVUTIL_LIBRARY NAMES avutil PATHS ${FFMPEG_SEARCH_PATHS} PATH_SUFFIXES lib)
+find_library(SWSCALE_LIBRARY NAMES swscale PATHS ${FFMPEG_SEARCH_PATHS} PATH_SUFFIXES lib)
+find_library(SWRESAMPLE_LIBRARY NAMES swresample PATHS ${FFMPEG_SEARCH_PATHS} PATH_SUFFIXES lib)
 
 if(AVCODEC_INCLUDE_DIR AND AVFORMAT_INCLUDE_DIR AND AVCODEC_LIBRARY AND AVFORMAT_LIBRARY)
     set(FFMPEG_FOUND TRUE)
@@ -27,4 +34,5 @@ if(AVCODEC_INCLUDE_DIR AND AVFORMAT_INCLUDE_DIR AND AVCODEC_LIBRARY AND AVFORMAT
         ${SWSCALE_LIBRARY}
         ${SWRESAMPLE_LIBRARY}
     )
+    message(STATUS "[Tavrynexo] Found FFmpeg in: ${AVCODEC_INCLUDE_DIR}")
 endif()

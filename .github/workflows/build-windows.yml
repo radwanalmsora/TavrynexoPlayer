@@ -18,6 +18,7 @@ jobs:
     - name: Setup MSVC Compiler
       uses: ilammy/msvc-dev-cmd@v1
 
+    # تثبيت Qt 6.6 الرسمية (بدون خطأ الموديول القديم)
     - name: Install Qt 6.6
       uses: jurplel/install-qt-action@v3
       with:
@@ -25,24 +26,50 @@ jobs:
         host: 'windows'
         target: 'desktop'
         arch: 'win64_msvc2019_64'
-        modules: 'qtquickcontrols2'
 
-    - name: Configure CMake (Visual Studio 2022)
+    # تثبيت Vulkan SDK
+    - name: Install Vulkan SDK
+      uses: humbletim/setup-vulkan-sdk@v1.2.0
+      with:
+        vulkan-query-version: 1.3.268.0
+        vulkan-components: Vulkan-Headers, Vulkan-Loader
+
+    # تحميل حزمة FFmpeg x64 Shared الرسمية
+    - name: Download FFmpeg Shared (x64)
+      shell: pwsh
       run: |
+        Invoke-WebRequest -Uri "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip" -OutFile "ffmpeg.zip"
+        7z x ffmpeg.zip -oC:\ffmpeg -y
+
+    # تهيئة وبناء المشروع بـ CMake و Visual Studio 2022
+    - name: Configure CMake
+      shell: pwsh
+      run: |
+        $ffmpegDir = (Get-ChildItem -Path "C:\ffmpeg" -Directory | Select-Object -First 1).FullName
         cmake -B build -S TavrynexoPlayer -G "Visual Studio 17 2022" -A x64 `
           -DCMAKE_BUILD_TYPE=Release `
-          -DCMAKE_PREFIX_PATH="${{ env.Qt6_DIR }}"
+          -DCMAKE_PREFIX_PATH="${{ env.Qt6_DIR }};$ffmpegDir" `
+          -DFFMPEG_ROOT="$ffmpegDir"
 
     - name: Build TavrynexoPlayer.exe
       run: |
         cmake --build build --config Release --parallel
 
-    - name: Package Standalone Deployment (windeployqt)
+    # تجميع ملفات التشغيل المستقلة (windeployqt + ملفات FFmpeg DLLs)
+    - name: Package Standalone Deployment
+      shell: pwsh
       run: |
-        mkdir dist
-        copy build\Release\TavrynexoPlayer.exe dist\
+        New-Item -ItemType Directory -Path dist -Force
+        Copy-Item "build\Release\TavrynexoPlayer.exe" -Destination dist\ -Force
+        
+        # حزم مكتبات Qt و QML
         & "${{ env.Qt6_DIR }}\bin\windeployqt.exe" --qmldir TavrynexoPlayer\qml --release --no-translations dist\TavrynexoPlayer.exe
+        
+        # نسخ ملفات FFmpeg DLLs (avcodec, avformat, swscale, إلخ)
+        $ffmpegBin = (Get-ChildItem -Path "C:\ffmpeg" -Directory | Select-Object -First 1).FullName + "\bin"
+        Copy-Item "$ffmpegBin\*.dll" -Destination dist\ -Force
 
+    # رفع الحزمة الكاملة كـ ZIP جاهز للتنزيل المباشر
     - name: Upload Standalone EXE Package
       uses: actions/upload-artifact@v4
       with:
