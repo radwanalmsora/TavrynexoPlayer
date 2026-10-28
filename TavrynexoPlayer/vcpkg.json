@@ -1,0 +1,15 @@
+{
+  "name": "tavrynexo-player",
+  "version-string": "1.0.0",
+  "description": "Modern Cinematic 4K/HDR Desktop Media Player built with C++20, Qt6, FFmpeg, and Vulkan",
+  "homepage": "https://github.com/Tavrynexo/Player",
+  "dependencies": [
+    {
+      "name": "ffmpeg",
+      "features": ["avcodec", "avformat", "avutil", "swscale", "swresample"]
+    },
+    "vulkan-headers",
+    "vulkan-loader"
+  ],
+  "builtin-baseline": "2024-04-01"
+}

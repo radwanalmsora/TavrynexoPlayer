@@ -1,0 +1,30 @@
+# Tavrynexo Player - FFmpeg Finder Module
+find_path(AVCODEC_INCLUDE_DIR libavcodec/avcodec.h)
+find_path(AVFORMAT_INCLUDE_DIR libavformat/avformat.h)
+find_path(AVUTIL_INCLUDE_DIR libavutil/avutil.h)
+find_path(SWSCALE_INCLUDE_DIR libswscale/swscale.h)
+find_path(SWRESAMPLE_INCLUDE_DIR libswresample/swresample.h)
+
+find_library(AVCODEC_LIBRARY NAMES avcodec)
+find_library(AVFORMAT_LIBRARY NAMES avformat)
+find_library(AVUTIL_LIBRARY NAMES avutil)
+find_library(SWSCALE_LIBRARY NAMES swscale)
+find_library(SWRESAMPLE_LIBRARY NAMES swresample)
+
+if(AVCODEC_INCLUDE_DIR AND AVFORMAT_INCLUDE_DIR AND AVCODEC_LIBRARY AND AVFORMAT_LIBRARY)
+    set(FFMPEG_FOUND TRUE)
+    set(FFMPEG_INCLUDE_DIRS
+        ${AVCODEC_INCLUDE_DIR}
+        ${AVFORMAT_INCLUDE_DIR}
+        ${AVUTIL_INCLUDE_DIR}
+        ${SWSCALE_INCLUDE_DIR}
+        ${SWRESAMPLE_INCLUDE_DIR}
+    )
+    set(FFMPEG_LIBRARIES
+        ${AVCODEC_LIBRARY}
+        ${AVFORMAT_LIBRARY}
+        ${AVUTIL_LIBRARY}
+        ${SWSCALE_LIBRARY}
+        ${SWRESAMPLE_LIBRARY}
+    )
+endif()
