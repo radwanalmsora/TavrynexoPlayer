@@ -34,27 +34,32 @@ jobs:
         shell: pwsh
         run: |
           $ProgressPreference = 'SilentlyContinue'
-          $vulkanVer = "1.3.290.0"
-          $installer = "VulkanSDK-${vulkanVer}-Installer.exe"
-          $url = "https://sdk.lunarg.com/sdk/download/${vulkanVer}/windows/${installer}"
-          Write-Host "Downloading LunarG Vulkan SDK $vulkanVer..."
           [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-          Invoke-WebRequest -Uri $url -OutFile $installer
-          Write-Host "Running silent installation..."
-          $proc = Start-Process -FilePath ".\$installer" -ArgumentList "install", "--accept-licenses", "--default-answer", "--confirm-command" -Wait -PassThru
+          
+          Write-Host "Querying latest active Vulkan SDK version from LunarG API..."
+          $versionData = Invoke-RestMethod -Uri "https://vulkan.lunarg.com/sdk/latest.json"
+          $vulkanVer = $versionData.windows
+          Write-Host "Found active Vulkan SDK version: $vulkanVer"
+          
+          $installer = "VulkanSDK-$vulkanVer-Installer.exe"
+          $downloadUrl = "https://sdk.lunarg.com/sdk/download/$vulkanVer/windows/$installer"
+          Write-Host "Downloading Vulkan SDK installer from: $downloadUrl..."
+          Invoke-WebRequest -Uri $downloadUrl -OutFile $installer
+          
+          Write-Host "Executing silent installation to C:\VulkanSDK..."
+          Start-Process -FilePath ".\$installer" -ArgumentList "--root C:\VulkanSDK --accept-licenses --default-answer --confirm-command install" -Wait
           Remove-Item $installer -Force -ErrorAction SilentlyContinue
           
-          $sdkPath = "C:\VulkanSDK\$vulkanVer"
-          if (Test-Path $sdkPath) {
-            Write-Host "Vulkan SDK successfully verified at: $sdkPath"
-            "VULKAN_SDK=$sdkPath" | Out-File -FilePath $env:GITHUB_ENV -Append
-            "$sdkPath\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
+          if (Test-Path "C:\VulkanSDK") {
+            Write-Host "Vulkan SDK verified at C:\VulkanSDK"
+            "VULKAN_SDK=C:\VulkanSDK" | Out-File -FilePath $env:GITHUB_ENV -Append
+            "C:\VulkanSDK\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
           } else {
-            $fallback = Get-ChildItem "C:\VulkanSDK" -Directory -ErrorAction SilentlyContinue | Select-Object -First 1
-            if ($fallback) {
-              Write-Host "Vulkan SDK located at: $($fallback.FullName)"
-              "VULKAN_SDK=$($fallback.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Append
-              "$($fallback.FullName)\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
+            $foundDir = Get-ChildItem "C:\VulkanSDK*" -Directory -ErrorAction SilentlyContinue | Select-Object -First 1
+            if ($foundDir) {
+              Write-Host "Vulkan SDK verified at $($foundDir.FullName)"
+              "VULKAN_SDK=$($foundDir.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Append
+              "$($foundDir.FullName)\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
             }
           }
 
@@ -65,7 +70,7 @@ jobs:
           $url = "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip"
           Write-Host "Downloading FFmpeg shared build..."
           Invoke-WebRequest -Uri $url -OutFile "ffmpeg.zip"
-          Write-Host "Extracting FFmpeg..."
+          Write-Host "Extracting FFmpeg to temporary directory..."
           Expand-Archive -Path "ffmpeg.zip" -DestinationPath "$env:RUNNER_TEMP\ffmpeg_temp" -Force
           $extracted = Get-ChildItem "$env:RUNNER_TEMP\ffmpeg_temp" -Directory | Select-Object -First 1
           Move-Item -Path $extracted.FullName -Destination "C:\ffmpeg"
@@ -78,8 +83,9 @@ jobs:
         run: |
           cmake -B build -G "Visual Studio 17 2022" -A x64 `
             -DCMAKE_BUILD_TYPE=Release `
-            -DCMAKE_PREFIX_PATH="$env:QT_ROOT_DIR;C:\ffmpeg" `
-            -DFFMPEG_ROOT="C:\ffmpeg"
+            -DCMAKE_PREFIX_PATH="$env:QT_ROOT_DIR;C:\ffmpeg;C:\VulkanSDK" `
+            -DFFMPEG_ROOT="C:\ffmpeg" `
+            -DVulkan_ROOT="C:\VulkanSDK"
 
       - name: Build Tavrynexo Player
         shell: pwsh
@@ -92,14 +98,14 @@ jobs:
           New-Item -ItemType Directory -Force -Path "package/TavrynexoPlayer"
           Copy-Item "build\Release\TavrynexoPlayer.exe" "package\TavrynexoPlayer\"
           
-          # Deploy Qt runtime and QML dependencies
+          # Deploy Qt runtime and QML plugins
           $windeployqt = "$env:QT_ROOT_DIR\bin\windeployqt.exe"
           & $windeployqt --release --qmldir qml --compiler-runtime package\TavrynexoPlayer\TavrynexoPlayer.exe
           
-          # Copy FFmpeg shared libraries (avcodec, avformat, swresample, etc.)
+          # Copy FFmpeg shared libraries
           Copy-Item "C:\ffmpeg\bin\*.dll" "package\TavrynexoPlayer\" -Force
           
-          # Create compressed ZIP distribution bundle
+          # Create compressed ZIP bundle
           Compress-Archive -Path "package\TavrynexoPlayer\*" -DestinationPath "TavrynexoPlayer-Windows-x64.zip" -CompressionLevel Optimal
 
       - name: Upload Artifact
