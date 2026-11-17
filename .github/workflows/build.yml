@@ -1,0 +1,86 @@
+name: Build Tavrynexo Player
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Compute version
+        id: ver
+        shell: pwsh
+        run: |
+          if ("${{ github.ref_type }}" -eq "tag") { $v = "${{ github.ref_name }}".TrimStart('v') } else { $v = "1.0.${{ github.run_number }}" }
+          "version=$v" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          Write-Host "Version: $v"
+
+      - name: Restore
+        run: dotnet restore src/TavrynexoPlayer/TavrynexoPlayer.csproj -r win-x64
+
+      - name: Publish (self-contained, win-x64)
+        run: >
+          dotnet publish src/TavrynexoPlayer/TavrynexoPlayer.csproj
+          -c Release -r win-x64 --self-contained true --no-restore
+          -o publish
+          -p:Version=${{ steps.ver.outputs.version }}
+          -p:DebugType=None -p:DebugSymbols=false
+
+      - name: Verify output
+        shell: pwsh
+        run: |
+          if (!(Test-Path publish/TavrynexoPlayer.exe)) { throw "TavrynexoPlayer.exe not found" }
+          if (!(Test-Path publish/libvlc)) { throw "libvlc folder not found in publish output" }
+          Get-ChildItem publish | Select-Object -First 30 | Format-Table Name, Length
+
+      - name: Create portable ZIP
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path artifacts | Out-Null
+          Compress-Archive -Path publish/* -DestinationPath "artifacts/TavrynexoPlayer-${{ steps.ver.outputs.version }}-portable-win-x64.zip" -Force
+
+      - name: Install Inno Setup
+        shell: pwsh
+        run: choco install innosetup -y --no-progress
+
+      - name: Build installer
+        shell: pwsh
+        run: |
+          & "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" "/DMyAppVersion=${{ steps.ver.outputs.version }}" installer\TavrynexoPlayer.iss
+          if ($LASTEXITCODE -ne 0) { throw "Inno Setup failed" }
+
+      - name: Upload installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: TavrynexoPlayer-Setup
+          path: artifacts/TavrynexoPlayer-Setup-*.exe
+
+      - name: Upload portable build
+        uses: actions/upload-artifact@v4
+        with:
+          name: TavrynexoPlayer-Portable
+          path: artifacts/*-portable-win-x64.zip
+
+      - name: Publish GitHub Release (tags only)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            artifacts/TavrynexoPlayer-Setup-*.exe
+            artifacts/*-portable-win-x64.zip
+          generate_release_notes: true
