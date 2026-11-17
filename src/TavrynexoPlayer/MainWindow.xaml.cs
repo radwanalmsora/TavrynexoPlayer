@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Shell;
 using System.Windows.Threading;
 using LibVLCSharp.Shared;
+using LibVLCSharp.Shared.Structures;
 using Microsoft.Win32;
 using TavrynexoPlayer.Models;
 using TavrynexoPlayer.Services;
