@@ -1,0 +1,688 @@
+@ro
+Media
+Redare
+Audio
+Video
+Subtitrare
+Vizualizare
+Setări
+Ajutor
+Deschide fișier…
+Adaugă fișiere în listă…
+Deschide folder…
+Deschide flux de rețea…
+Fișiere recente
+(gol)
+Șterge recentele
+Ieșire
+Redare / Pauză
+Oprire
+Anterior
+Următorul
+Derulează 10 s înainte
+Derulează 10 s înapoi
+Viteză
+Normală
+Repetă
+Aleatoriu
+Pistă audio
+(niciuna)
+Mărește volumul
+Micșorează volumul
+Fără sunet
+Întârziere audio −50 ms
+Întârziere audio +50 ms
+Raport de aspect
+Implicit
+Ecran complet
+Realizează captură
+Adaugă fișier de subtitrare…
+Pistă de subtitrare
+Întârziere subtitrare −50 ms
+Întârziere subtitrare +50 ms
+Listă de redare
+Mereu deasupra
+Limbă…
+Comenzi rapide de la tastatură
+Despre Tavrynexo Player
+Cod sursă pe GitHub
+Contactează dezvoltatorul
+Golește lista
+Faceți clic pentru a reseta viteza
+Trageți aici un fișier video sau audio
+Deschide fișier
+Deschide URL
+{0} element(e) adăugat(e)
+Reluat de la {0}
+Acest fișier nu poate fi redat
+Volum {0}%
+Sunet oprit
+Viteză {0}
+Repetare dezactivată
+Repetă tot
+Repetă unul
+Aleatoriu activat
+Aleatoriu dezactivat
+Raport de aspect: {0}
+Întârziere audio {0} ms
+Întârziere subtitrare {0} ms
+Captură salvată
+Salvarea capturii a eșuat
+Lipiți un link direct către media (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Redă
+Anulează
+Închide
+OK
+Un player multimedia modern și rapid pentru Windows 10 și Windows 11.
+Motor de redare: LibVLC (VideoLAN), licență LGPL 2.1+.
+Dezvoltator
+E-mail
+Open source
+Versiunea {0}
+Caută…
+Fișiere media
+Toate fișierele
+Subtitrări
+Salt 5 s (Shift 30 s, Ctrl 60 s)
+@hu
+Média
+Lejátszás
+Hang
+Videó
+Feliratok
+Nézet
+Beállítások
+Súgó
+Fájl megnyitása…
+Fájlok hozzáadása a listához…
+Mappa megnyitása…
+Hálózati adatfolyam megnyitása…
+Legutóbbi média
+(üres)
+Legutóbbiak törlése
+Kilépés
+Lejátszás / Szünet
+Leállítás
+Előző
+Következő
+Ugrás előre 10 mp-cel
+Ugrás vissza 10 mp-cel
+Sebesség
+Normál
+Ismétlés
+Véletlen sorrend
+Hangsáv
+(nincs)
+Hangerő fel
+Hangerő le
+Némítás
+Hang késleltetése −50 ms
+Hang késleltetése +50 ms
+Képarány
+Alapértelmezett
+Teljes képernyő
+Pillanatkép készítése
+Feliratfájl hozzáadása…
+Feliratsáv
+Felirat késleltetése −50 ms
+Felirat késleltetése +50 ms
+Lejátszási lista
+Mindig legfelül
+Nyelv…
+Billentyűparancsok
+A Tavrynexo Player névjegye
+Forráskód a GitHubon
+Kapcsolat a fejlesztővel
+Lista törlése
+Kattintson a sebesség visszaállításához
+Húzzon ide egy videó- vagy hangfájlt
+Fájl megnyitása
+URL megnyitása
+{0} elem hozzáadva
+Folytatás innen: {0}
+Ez a médiafájl nem játszható le
+Hangerő {0}%
+Némítva
+Sebesség {0}
+Ismétlés ki
+Összes ismétlése
+Egy ismétlése
+Véletlen sorrend be
+Véletlen sorrend ki
+Képarány: {0}
+Hang késleltetése {0} ms
+Felirat késleltetése {0} ms
+Pillanatkép mentve
+A pillanatkép mentése sikertelen
+Illesszen be egy közvetlen médiahivatkozást (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Lejátszás
+Mégse
+Bezárás
+OK
+Modern és gyors médialejátszó Windows 10-hez és Windows 11-hez.
+Lejátszómotor: LibVLC (VideoLAN), LGPL 2.1+ licenc.
+Fejlesztő
+E-mail
+Nyílt forráskód
+{0}. verzió
+Keresés…
+Médiafájlok
+Minden fájl
+Feliratok
+Ugrás 5 mp (Shift 30 mp, Ctrl 60 mp)
+@lt
+Medija
+Atkūrimas
+Garsas
+Vaizdo įrašas
+Subtitrai
+Rodymas
+Nustatymai
+Pagalba
+Atidaryti failą…
+Pridėti failų į grojaraštį…
+Atidaryti aplanką…
+Atidaryti tinklo srautą…
+Neseniai naudota medija
+(tuščia)
+Išvalyti neseniai naudotus
+Išeiti
+Groti / Pristabdyti
+Stabdyti
+Ankstesnis
+Kitas
+Peršokti 10 s pirmyn
+Peršokti 10 s atgal
+Greitis
+Įprastas
+Kartoti
+Atsitiktinė tvarka
+Garso takelis
+(nėra)
+Padidinti garsą
+Sumažinti garsą
+Nutildyti
+Garso vėlinimas −50 ms
+Garso vėlinimas +50 ms
+Vaizdo formatas
+Numatytasis
+Visas ekranas
+Padaryti ekrano nuotrauką
+Pridėti subtitrų failą…
+Subtitrų takelis
+Subtitrų vėlinimas −50 ms
+Subtitrų vėlinimas +50 ms
+Grojaraštis
+Visada viršuje
+Kalba…
+Spartieji klavišai
+Apie „Tavrynexo Player“
+Šaltinio kodas „GitHub“
+Susisiekti su kūrėju
+Išvalyti grojaraštį
+Spustelėkite greičiui atkurti
+Nuvilkite čia vaizdo ar garso failą
+Atidaryti failą
+Atidaryti URL
+Pridėta elementų: {0}
+Tęsiama nuo {0}
+Šios medijos neįmanoma atkurti
+Garsas {0} %
+Nutildyta
+Greitis {0}
+Kartojimas išjungtas
+Kartoti viską
+Kartoti vieną
+Atsitiktinė tvarka įjungta
+Atsitiktinė tvarka išjungta
+Vaizdo formatas: {0}
+Garso vėlinimas {0} ms
+Subtitrų vėlinimas {0} ms
+Ekrano nuotrauka išsaugota
+Nepavyko išsaugoti ekrano nuotraukos
+Įklijuokite tiesioginę medijos nuorodą (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Groti
+Atšaukti
+Uždaryti
+Gerai
+Modernus ir greitas medijos grotuvas „Windows 10“ ir „Windows 11“.
+Atkūrimo variklis: LibVLC (VideoLAN), licencija LGPL 2.1+.
+Kūrėjas
+El. paštas
+Atvirasis kodas
+Versija {0}
+Ieškoti…
+Medijos failai
+Visi failai
+Subtitrai
+Peršokti 5 s (Shift 30 s, Ctrl 60 s)
+@id
+Media
+Pemutaran
+Audio
+Video
+Subjudul
+Tampilan
+Pengaturan
+Bantuan
+Buka File…
+Tambahkan File ke Daftar Putar…
+Buka Folder…
+Buka Aliran Jaringan…
+Media Terbaru
+(kosong)
+Hapus terbaru
+Keluar
+Putar / Jeda
+Berhenti
+Sebelumnya
+Berikutnya
+Maju 10 detik
+Mundur 10 detik
+Kecepatan
+Normal
+Ulangi
+Acak
+Trek Audio
+(tidak ada)
+Naikkan Volume
+Turunkan Volume
+Bisukan
+Tunda Audio −50 md
+Tunda Audio +50 md
+Rasio Aspek
+Bawaan
+Layar Penuh
+Ambil Cuplikan
+Tambah File Subjudul…
+Trek Subjudul
+Tunda Subjudul −50 md
+Tunda Subjudul +50 md
+Daftar Putar
+Selalu di Atas
+Bahasa…
+Pintasan Keyboard
+Tentang Tavrynexo Player
+Kode Sumber di GitHub
+Hubungi Pengembang
+Hapus daftar putar
+Klik untuk mengatur ulang kecepatan
+Letakkan file video atau audio di sini
+Buka File
+Buka URL
+{0} item ditambahkan
+Dilanjutkan dari {0}
+Media ini tidak dapat diputar
+Volume {0}%
+Dibisukan
+Kecepatan {0}
+Ulangi mati
+Ulangi semua
+Ulangi satu
+Acak hidup
+Acak mati
+Rasio aspek: {0}
+Tunda audio {0} md
+Tunda subjudul {0} md
+Cuplikan disimpan
+Cuplikan gagal
+Tempel tautan media langsung (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Putar
+Batal
+Tutup
+OK
+Pemutar media modern dan cepat untuk Windows 10 dan Windows 11.
+Mesin pemutar: LibVLC (VideoLAN), berlisensi LGPL 2.1+.
+Pengembang
+Email
+Sumber terbuka
+Versi {0}
+Cari…
+File media
+Semua file
+Subjudul
+Lompat 5 dtk (Shift 30 dtk, Ctrl 60 dtk)
+@ms
+Media
+Main Semula
+Audio
+Video
+Sari Kata
+Paparan
+Tetapan
+Bantuan
+Buka Fail…
+Tambah Fail ke Senarai Main…
+Buka Folder…
+Buka Strim Rangkaian…
+Media Terkini
+(kosong)
+Kosongkan terkini
+Keluar
+Main / Jeda
+Henti
+Sebelumnya
+Seterusnya
+Lompat Ke Hadapan 10 s
+Lompat Ke Belakang 10 s
+Kelajuan
+Normal
+Ulang
+Rawak
+Trek Audio
+(tiada)
+Kuatkan Bunyi
+Perlahankan Bunyi
+Senyap
+Lengah Audio −50 ms
+Lengah Audio +50 ms
+Nisbah Bidang
+Lalai
+Skrin Penuh
+Ambil Tangkapan
+Tambah Fail Sari Kata…
+Trek Sari Kata
+Lengah Sari Kata −50 ms
+Lengah Sari Kata +50 ms
+Senarai Main
+Sentiasa di Atas
+Bahasa…
+Pintasan Papan Kekunci
+Perihal Tavrynexo Player
+Kod Sumber di GitHub
+Hubungi Pembangun
+Kosongkan senarai main
+Klik untuk menetapkan semula kelajuan
+Lepaskan fail video atau audio di sini
+Buka Fail
+Buka URL
+{0} item ditambah
+Disambung semula pada {0}
+Media ini tidak dapat dimainkan
+Kelantangan {0}%
+Disenyapkan
+Kelajuan {0}
+Ulang dimatikan
+Ulang semua
+Ulang satu
+Rawak dihidupkan
+Rawak dimatikan
+Nisbah bidang: {0}
+Lengah audio {0} ms
+Lengah sari kata {0} ms
+Tangkapan disimpan
+Tangkapan gagal
+Tampal pautan media terus (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Main
+Batal
+Tutup
+OK
+Pemain media moden dan pantas untuk Windows 10 dan Windows 11.
+Enjin main semula: LibVLC (VideoLAN), berlesen LGPL 2.1+.
+Pembangun
+E-mel
+Sumber terbuka
+Versi {0}
+Cari…
+Fail media
+Semua fail
+Sari kata
+Langkau 5 s (Shift 30 s, Ctrl 60 s)
+@vi
+Phương tiện
+Phát
+Âm thanh
+Video
+Phụ đề
+Xem
+Cài đặt
+Trợ giúp
+Mở tệp…
+Thêm tệp vào danh sách phát…
+Mở thư mục…
+Mở luồng mạng…
+Phương tiện gần đây
+(trống)
+Xóa danh sách gần đây
+Thoát
+Phát / Tạm dừng
+Dừng
+Trước
+Tiếp theo
+Tua tới 10 giây
+Tua lui 10 giây
+Tốc độ
+Bình thường
+Lặp lại
+Ngẫu nhiên
+Bản âm thanh
+(không có)
+Tăng âm lượng
+Giảm âm lượng
+Tắt tiếng
+Độ trễ âm thanh −50 ms
+Độ trễ âm thanh +50 ms
+Tỷ lệ khung hình
+Mặc định
+Toàn màn hình
+Chụp ảnh màn hình
+Thêm tệp phụ đề…
+Bản phụ đề
+Độ trễ phụ đề −50 ms
+Độ trễ phụ đề +50 ms
+Danh sách phát
+Luôn ở trên cùng
+Ngôn ngữ…
+Phím tắt
+Giới thiệu Tavrynexo Player
+Mã nguồn trên GitHub
+Liên hệ nhà phát triển
+Xóa danh sách phát
+Nhấp để đặt lại tốc độ
+Thả tệp video hoặc âm thanh vào đây
+Mở tệp
+Mở URL
+Đã thêm {0} mục
+Tiếp tục từ {0}
+Không thể phát nội dung này
+Âm lượng {0}%
+Đã tắt tiếng
+Tốc độ {0}
+Tắt lặp lại
+Lặp lại tất cả
+Lặp lại một
+Bật ngẫu nhiên
+Tắt ngẫu nhiên
+Tỷ lệ khung hình: {0}
+Độ trễ âm thanh {0} ms
+Độ trễ phụ đề {0} ms
+Đã lưu ảnh chụp
+Chụp ảnh thất bại
+Dán liên kết phương tiện trực tiếp (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Phát
+Hủy
+Đóng
+OK
+Trình phát đa phương tiện hiện đại, nhanh cho Windows 10 và Windows 11.
+Công cụ phát: LibVLC (VideoLAN), giấy phép LGPL 2.1+.
+Nhà phát triển
+Email
+Mã nguồn mở
+Phiên bản {0}
+Tìm kiếm…
+Tệp phương tiện
+Tất cả tệp
+Phụ đề
+Tua 5 giây (Shift 30 giây, Ctrl 60 giây)
+@be
+Медыя
+Прайграванне
+Аўдыё
+Відэа
+Субцітры
+Выгляд
+Налады
+Даведка
+Адкрыць файл…
+Дадаць файлы ў плэйліст…
+Адкрыць тэчку…
+Адкрыць сеткавы струмень…
+Нядаўнія файлы
+(пуста)
+Ачысціць спіс
+Выхад
+Прайграць / Паўза
+Стоп
+Папярэдні
+Наступны
+Наперад на 10 с
+Назад на 10 с
+Хуткасць
+Звычайная
+Паўтор
+Перамяшаць
+Аўдыёдарожка
+(няма)
+Гучней
+Цішэй
+Адключыць гук
+Затрымка гуку −50 мс
+Затрымка гуку +50 мс
+Суадносіны бакоў
+Па змаўчанні
+Поўны экран
+Зрабіць здымак
+Дадаць файл субцітраў…
+Дарожка субцітраў
+Затрымка субцітраў −50 мс
+Затрымка субцітраў +50 мс
+Плэйліст
+Заўсёды зверху
+Мова…
+Гарачыя клавішы
+Пра праграму Tavrynexo Player
+Зыходны код на GitHub
+Звязацца з распрацоўшчыкам
+Ачысціць плэйліст
+Націсніце, каб скінуць хуткасць
+Перацягніце сюды відэа- або аўдыёфайл
+Адкрыць файл
+Адкрыць URL
+Дададзена элементаў: {0}
+Працягнута з {0}
+Немагчыма прайграць гэты файл
+Гучнасць {0}%
+Гук адключаны
+Хуткасць {0}
+Паўтор выключаны
+Паўтор усіх
+Паўтор аднаго
+Перамешванне ўключана
+Перамешванне выключана
+Суадносіны бакоў: {0}
+Затрымка гуку {0} мс
+Затрымка субцітраў {0} мс
+Здымак захаваны
+Не ўдалося захаваць здымак
+Устаўце прамую спасылку на медыя (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Прайграць
+Скасаваць
+Закрыць
+ОК
+Сучасны і хуткі медыяплэер для Windows 10 і Windows 11.
+Рухавік прайгравання: LibVLC (VideoLAN), ліцэнзія LGPL 2.1+.
+Распрацоўшчык
+Эл. пошта
+Адкрыты зыходны код
+Версія {0}
+Пошук…
+Медыяфайлы
+Усе файлы
+Субцітры
+Перамотка 5 с (Shift 30 с, Ctrl 60 с)
+@uk
+Медіа
+Відтворення
+Аудіо
+Відео
+Субтитри
+Вигляд
+Налаштування
+Довідка
+Відкрити файл…
+Додати файли до списку…
+Відкрити теку…
+Відкрити мережевий потік…
+Нещодавні файли
+(порожньо)
+Очистити список
+Вихід
+Відтворити / Пауза
+Стоп
+Попередній
+Наступний
+Вперед на 10 с
+Назад на 10 с
+Швидкість
+Звичайна
+Повторення
+Випадково
+Аудіодоріжка
+(немає)
+Гучніше
+Тихіше
+Вимкнути звук
+Затримка звуку −50 мс
+Затримка звуку +50 мс
+Співвідношення сторін
+За замовчуванням
+На весь екран
+Зробити знімок
+Додати файл субтитрів…
+Доріжка субтитрів
+Затримка субтитрів −50 мс
+Затримка субтитрів +50 мс
+Список відтворення
+Завжди зверху
+Мова…
+Гарячі клавіші
+Про програму Tavrynexo Player
+Вихідний код на GitHub
+Зв'язатися з розробником
+Очистити список
+Натисніть, щоб скинути швидкість
+Перетягніть сюди відео- або аудіофайл
+Відкрити файл
+Відкрити URL
+Додано елементів: {0}
+Продовжено з {0}
+Неможливо відтворити цей файл
+Гучність {0}%
+Звук вимкнено
+Швидкість {0}
+Повторення вимкнено
+Повторити все
+Повторити один
+Випадковий порядок увімкнено
+Випадковий порядок вимкнено
+Співвідношення сторін: {0}
+Затримка звуку {0} мс
+Затримка субтитрів {0} мс
+Знімок збережено
+Не вдалося зберегти знімок
+Вставте пряме посилання на медіа (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Відтворити
+Скасувати
+Закрити
+ОК
+Сучасний і швидкий медіаплеєр для Windows 10 і Windows 11.
+Рушій відтворення: LibVLC (VideoLAN), ліцензія LGPL 2.1+.
+Розробник
+Ел. пошта
+Відкритий код
+Версія {0}
+Пошук…
+Медіафайли
+Усі файли
+Субтитри
+Перемотування 5 с (Shift 30 с, Ctrl 60 с)

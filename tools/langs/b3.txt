@@ -1,0 +1,688 @@
+@cs
+Média
+Přehrávání
+Zvuk
+Video
+Titulky
+Zobrazení
+Nastavení
+Nápověda
+Otevřít soubor…
+Přidat soubory do seznamu…
+Otevřít složku…
+Otevřít síťový stream…
+Nedávná média
+(prázdné)
+Vymazat nedávné
+Konec
+Přehrát / Pozastavit
+Zastavit
+Předchozí
+Další
+Přetočit o 10 s vpřed
+Přetočit o 10 s zpět
+Rychlost
+Normální
+Opakovat
+Náhodně
+Zvuková stopa
+(žádná)
+Zvýšit hlasitost
+Snížit hlasitost
+Ztlumit
+Zpoždění zvuku −50 ms
+Zpoždění zvuku +50 ms
+Poměr stran
+Výchozí
+Celá obrazovka
+Pořídit snímek
+Přidat soubor titulků…
+Stopa titulků
+Zpoždění titulků −50 ms
+Zpoždění titulků +50 ms
+Seznam skladeb
+Vždy nahoře
+Jazyk…
+Klávesové zkratky
+O programu Tavrynexo Player
+Zdrojový kód na GitHubu
+Kontaktovat vývojáře
+Vymazat seznam
+Kliknutím obnovíte rychlost
+Přetáhněte sem video nebo zvukový soubor
+Otevřít soubor
+Otevřít URL
+Přidáno položek: {0}
+Pokračuje od {0}
+Toto médium nelze přehrát
+Hlasitost {0} %
+Ztlumeno
+Rychlost {0}
+Opakování vypnuto
+Opakovat vše
+Opakovat jednu
+Náhodně zapnuto
+Náhodně vypnuto
+Poměr stran: {0}
+Zpoždění zvuku {0} ms
+Zpoždění titulků {0} ms
+Snímek uložen
+Uložení snímku selhalo
+Vložte přímý odkaz na médium (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Přehrát
+Zrušit
+Zavřít
+OK
+Moderní a rychlý přehrávač médií pro Windows 10 a Windows 11.
+Přehrávací jádro: LibVLC (VideoLAN), licence LGPL 2.1+.
+Vývojář
+E-mail
+Open source
+Verze {0}
+Hledat…
+Mediální soubory
+Všechny soubory
+Titulky
+Posun o 5 s (Shift 30 s, Ctrl 60 s)
+@sk
+Médiá
+Prehrávanie
+Zvuk
+Video
+Titulky
+Zobrazenie
+Nastavenia
+Pomocník
+Otvoriť súbor…
+Pridať súbory do zoznamu…
+Otvoriť priečinok…
+Otvoriť sieťový stream…
+Nedávne médiá
+(prázdne)
+Vymazať nedávne
+Koniec
+Prehrať / Pozastaviť
+Zastaviť
+Predchádzajúce
+Ďalšie
+Preskočiť o 10 s vpred
+Preskočiť o 10 s vzad
+Rýchlosť
+Normálna
+Opakovať
+Náhodne
+Zvuková stopa
+(žiadna)
+Zvýšiť hlasitosť
+Znížiť hlasitosť
+Stlmiť
+Oneskorenie zvuku −50 ms
+Oneskorenie zvuku +50 ms
+Pomer strán
+Predvolený
+Celá obrazovka
+Urobiť snímku
+Pridať súbor titulkov…
+Stopa titulkov
+Oneskorenie titulkov −50 ms
+Oneskorenie titulkov +50 ms
+Zoznam skladieb
+Vždy navrchu
+Jazyk…
+Klávesové skratky
+O programe Tavrynexo Player
+Zdrojový kód na GitHub
+Kontaktovať vývojára
+Vymazať zoznam
+Kliknutím obnovíte rýchlosť
+Presuňte sem video alebo zvukový súbor
+Otvoriť súbor
+Otvoriť URL
+Pridané položky: {0}
+Pokračuje od {0}
+Toto médium sa nedá prehrať
+Hlasitosť {0} %
+Stlmené
+Rýchlosť {0}
+Opakovanie vypnuté
+Opakovať všetko
+Opakovať jednu
+Náhodne zapnuté
+Náhodne vypnuté
+Pomer strán: {0}
+Oneskorenie zvuku {0} ms
+Oneskorenie titulkov {0} ms
+Snímka uložená
+Uloženie snímky zlyhalo
+Vložte priamy odkaz na médium (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Prehrať
+Zrušiť
+Zavrieť
+OK
+Moderný a rýchly prehrávač médií pre Windows 10 a Windows 11.
+Prehrávací nástroj: LibVLC (VideoLAN), licencia LGPL 2.1+.
+Vývojár
+E-mail
+Open source
+Verzia {0}
+Hľadať…
+Mediálne súbory
+Všetky súbory
+Titulky
+Posun o 5 s (Shift 30 s, Ctrl 60 s)
+@sl
+Predstavnost
+Predvajanje
+Zvok
+Video
+Podnapisi
+Pogled
+Nastavitve
+Pomoč
+Odpri datoteko…
+Dodaj datoteke na seznam…
+Odpri mapo…
+Odpri omrežni tok…
+Nedavni mediji
+(prazno)
+Počisti nedavne
+Izhod
+Predvajaj / Premor
+Ustavi
+Prejšnji
+Naslednji
+Skoči naprej za 10 s
+Skoči nazaj za 10 s
+Hitrost
+Običajna
+Ponavljaj
+Naključno
+Zvočna sled
+(brez)
+Povečaj glasnost
+Zmanjšaj glasnost
+Izklopi zvok
+Zamik zvoka −50 ms
+Zamik zvoka +50 ms
+Razmerje stranic
+Privzeto
+Celoten zaslon
+Posnemi zaslon
+Dodaj datoteko podnapisov…
+Sled podnapisov
+Zamik podnapisov −50 ms
+Zamik podnapisov +50 ms
+Seznam predvajanja
+Vedno na vrhu
+Jezik…
+Tipkovne bližnjice
+O programu Tavrynexo Player
+Izvorna koda na GitHubu
+Stik z razvijalcem
+Počisti seznam
+Kliknite za ponastavitev hitrosti
+Spustite videoposnetek ali zvočno datoteko sem
+Odpri datoteko
+Odpri URL
+Dodanih elementov: {0}
+Nadaljevano pri {0}
+Tega predstavnostnega predmeta ni mogoče predvajati
+Glasnost {0} %
+Zvok izklopljen
+Hitrost {0}
+Ponavljanje izklopljeno
+Ponovi vse
+Ponovi eno
+Naključno vklopljeno
+Naključno izklopljeno
+Razmerje stranic: {0}
+Zamik zvoka {0} ms
+Zamik podnapisov {0} ms
+Posnetek shranjen
+Shranjevanje posnetka ni uspelo
+Prilepite neposredno povezavo do predstavnosti (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Predvajaj
+Prekliči
+Zapri
+V redu
+Sodoben in hiter predvajalnik predstavnosti za Windows 10 in Windows 11.
+Pogon za predvajanje: LibVLC (VideoLAN), licenca LGPL 2.1+.
+Razvijalec
+E-pošta
+Odprta koda
+Različica {0}
+Išči…
+Predstavnostne datoteke
+Vse datoteke
+Podnapisi
+Preskok 5 s (Shift 30 s, Ctrl 60 s)
+@hr
+Mediji
+Reprodukcija
+Zvuk
+Video
+Titlovi
+Prikaz
+Postavke
+Pomoć
+Otvori datoteku…
+Dodaj datoteke na popis…
+Otvori mapu…
+Otvori mrežni tok…
+Nedavni mediji
+(prazno)
+Očisti nedavne
+Izlaz
+Reproduciraj / Pauziraj
+Zaustavi
+Prethodno
+Sljedeće
+Premotaj 10 s naprijed
+Premotaj 10 s natrag
+Brzina
+Normalna
+Ponavljaj
+Nasumično
+Audiozapis
+(nema)
+Pojačaj glasnoću
+Smanji glasnoću
+Isključi zvuk
+Kašnjenje zvuka −50 ms
+Kašnjenje zvuka +50 ms
+Omjer slike
+Zadano
+Cijeli zaslon
+Snimi zaslon
+Dodaj datoteku titlova…
+Zapis titlova
+Kašnjenje titlova −50 ms
+Kašnjenje titlova +50 ms
+Popis za reprodukciju
+Uvijek na vrhu
+Jezik…
+Tipkovnički prečaci
+O programu Tavrynexo Player
+Izvorni kod na GitHubu
+Kontaktiraj programera
+Očisti popis
+Kliknite za vraćanje brzine
+Ispustite video ili audio datoteku ovdje
+Otvori datoteku
+Otvori URL
+Dodano stavki: {0}
+Nastavljeno od {0}
+Ovaj medij nije moguće reproducirati
+Glasnoća {0} %
+Zvuk isključen
+Brzina {0}
+Ponavljanje isključeno
+Ponovi sve
+Ponovi jedno
+Nasumično uključeno
+Nasumično isključeno
+Omjer slike: {0}
+Kašnjenje zvuka {0} ms
+Kašnjenje titlova {0} ms
+Snimka spremljena
+Spremanje snimke nije uspjelo
+Zalijepite izravnu poveznicu na medij (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Reproduciraj
+Odustani
+Zatvori
+U redu
+Moderan i brz media player za Windows 10 i Windows 11.
+Mehanizam reprodukcije: LibVLC (VideoLAN), licenca LGPL 2.1+.
+Programer
+E-pošta
+Otvoreni kod
+Verzija {0}
+Traži…
+Medijske datoteke
+Sve datoteke
+Titlovi
+Preskoči 5 s (Shift 30 s, Ctrl 60 s)
+@bs
+Mediji
+Reprodukcija
+Zvuk
+Video
+Titlovi
+Prikaz
+Postavke
+Pomoć
+Otvori datoteku…
+Dodaj datoteke na listu…
+Otvori folder…
+Otvori mrežni tok…
+Nedavni mediji
+(prazno)
+Očisti nedavne
+Izlaz
+Reproduciraj / Pauziraj
+Zaustavi
+Prethodno
+Sljedeće
+Premotaj 10 s naprijed
+Premotaj 10 s nazad
+Brzina
+Normalna
+Ponavljaj
+Nasumično
+Audio zapis
+(nema)
+Pojačaj zvuk
+Smanji zvuk
+Isključi zvuk
+Kašnjenje zvuka −50 ms
+Kašnjenje zvuka +50 ms
+Omjer slike
+Zadano
+Cijeli ekran
+Snimi ekran
+Dodaj datoteku titlova…
+Zapis titlova
+Kašnjenje titlova −50 ms
+Kašnjenje titlova +50 ms
+Lista za reprodukciju
+Uvijek na vrhu
+Jezik…
+Prečice na tastaturi
+O programu Tavrynexo Player
+Izvorni kod na GitHubu
+Kontaktiraj programera
+Očisti listu
+Kliknite za vraćanje brzine
+Ovdje ispustite video ili audio datoteku
+Otvori datoteku
+Otvori URL
+Dodano stavki: {0}
+Nastavljeno od {0}
+Ovaj medij nije moguće reproducirati
+Jačina zvuka {0} %
+Zvuk isključen
+Brzina {0}
+Ponavljanje isključeno
+Ponovi sve
+Ponovi jedno
+Nasumično uključeno
+Nasumično isključeno
+Omjer slike: {0}
+Kašnjenje zvuka {0} ms
+Kašnjenje titlova {0} ms
+Snimak sačuvan
+Čuvanje snimka nije uspjelo
+Zalijepite direktnu vezu do medija (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Reproduciraj
+Otkaži
+Zatvori
+U redu
+Moderan i brz media player za Windows 10 i Windows 11.
+Mehanizam reprodukcije: LibVLC (VideoLAN), licenca LGPL 2.1+.
+Programer
+E-pošta
+Otvoreni kod
+Verzija {0}
+Traži…
+Medijske datoteke
+Sve datoteke
+Titlovi
+Preskoči 5 s (Shift 30 s, Ctrl 60 s)
+@ca
+Multimèdia
+Reproducció
+Àudio
+Vídeo
+Subtítols
+Visualització
+Configuració
+Ajuda
+Obre un fitxer…
+Afegeix fitxers a la llista…
+Obre una carpeta…
+Obre un flux de xarxa…
+Fitxers recents
+(buit)
+Esborra els recents
+Surt
+Reprodueix / Pausa
+Atura
+Anterior
+Següent
+Avança 10 s
+Retrocedeix 10 s
+Velocitat
+Normal
+Repeteix
+Aleatori
+Pista d'àudio
+(cap)
+Apuja el volum
+Abaixa el volum
+Silencia
+Retard d'àudio −50 ms
+Retard d'àudio +50 ms
+Relació d'aspecte
+Per defecte
+Pantalla completa
+Fes una captura
+Afegeix un fitxer de subtítols…
+Pista de subtítols
+Retard de subtítols −50 ms
+Retard de subtítols +50 ms
+Llista de reproducció
+Sempre visible
+Llengua…
+Dreceres de teclat
+Quant a Tavrynexo Player
+Codi font a GitHub
+Contacta amb el desenvolupador
+Buida la llista
+Feu clic per restablir la velocitat
+Deixeu anar aquí un fitxer de vídeo o àudio
+Obre un fitxer
+Obre un URL
+{0} element(s) afegit(s)
+Represa a {0}
+No es pot reproduir aquest mitjà
+Volum {0}%
+Silenciat
+Velocitat {0}
+Repetició desactivada
+Repeteix tot
+Repeteix-ne un
+Aleatori activat
+Aleatori desactivat
+Relació d'aspecte: {0}
+Retard d'àudio {0} ms
+Retard de subtítols {0} ms
+Captura desada
+No s'ha pogut desar la captura
+Enganxeu un enllaç directe al mitjà (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Reprodueix
+Cancel·la
+Tanca
+D'acord
+Un reproductor multimèdia modern i ràpid per a Windows 10 i Windows 11.
+Motor de reproducció: LibVLC (VideoLAN), amb llicència LGPL 2.1+.
+Desenvolupador
+Correu electrònic
+Codi obert
+Versió {0}
+Cerca…
+Fitxers multimèdia
+Tots els fitxers
+Subtítols
+Salta 5 s (Maj 30 s, Ctrl 60 s)
+@eu
+Multimedia
+Erreprodukzioa
+Audioa
+Bideoa
+Azpitituluak
+Ikusi
+Ezarpenak
+Laguntza
+Ireki fitxategia…
+Gehitu fitxategiak zerrendara…
+Ireki karpeta…
+Ireki sareko jarioa…
+Azken multimedia
+(hutsik)
+Garbitu azkenak
+Irten
+Erreproduzitu / Pausatu
+Gelditu
+Aurrekoa
+Hurrengoa
+Aurrera 10 s
+Atzera 10 s
+Abiadura
+Normala
+Errepikatu
+Ausazkoa
+Audio-pista
+(bat ere ez)
+Igo bolumena
+Jaitsi bolumena
+Mututu
+Audioaren atzerapena −50 ms
+Audioaren atzerapena +50 ms
+Aspektu-erlazioa
+Lehenetsia
+Pantaila osoa
+Atera pantaila-argazkia
+Gehitu azpititulu-fitxategia…
+Azpititulu-pista
+Azpitituluen atzerapena −50 ms
+Azpitituluen atzerapena +50 ms
+Erreprodukzio-zerrenda
+Beti gainean
+Hizkuntza…
+Teklatu-lasterbideak
+Tavrynexo Player-i buruz
+Iturburu-kodea GitHub-en
+Jarri harremanetan garatzailearekin
+Garbitu zerrenda
+Egin klik abiadura berrezartzeko
+Jaregin hemen bideo edo audio fitxategi bat
+Ireki fitxategia
+Ireki URLa
+{0} elementu gehitu dira
+{0} puntuan jarraitu da
+Ezin da multimedia hau erreproduzitu
+Bolumena {0}%
+Mutututa
+Abiadura {0}
+Errepikapena desaktibatuta
+Errepikatu guztiak
+Errepikatu bat
+Ausazkoa aktibatuta
+Ausazkoa desaktibatuta
+Aspektu-erlazioa: {0}
+Audioaren atzerapena {0} ms
+Azpitituluen atzerapena {0} ms
+Pantaila-argazkia gordeta
+Pantaila-argazkia ezin izan da gorde
+Itsatsi multimedia-esteka zuzen bat (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Erreproduzitu
+Utzi
+Itxi
+Ados
+Windows 10 eta Windows 11rako multimedia-erreproduzitzaile moderno eta azkarra.
+Erreprodukzio-motorra: LibVLC (VideoLAN), LGPL 2.1+ lizentziarekin.
+Garatzailea
+Posta elektronikoa
+Iturburu irekia
+{0} bertsioa
+Bilatu…
+Multimedia-fitxategiak
+Fitxategi guztiak
+Azpitituluak
+Jauzi 5 s (Maius 30 s, Ctrl 60 s)
+@gl
+Multimedia
+Reprodución
+Audio
+Vídeo
+Subtítulos
+Ver
+Configuración
+Axuda
+Abrir ficheiro…
+Engadir ficheiros á lista…
+Abrir cartafol…
+Abrir fluxo de rede…
+Multimedia recente
+(baleiro)
+Borrar recentes
+Saír
+Reproducir / Pausar
+Parar
+Anterior
+Seguinte
+Avanzar 10 s
+Retroceder 10 s
+Velocidade
+Normal
+Repetir
+Aleatorio
+Pista de audio
+(ningunha)
+Subir o volume
+Baixar o volume
+Silenciar
+Atraso do audio −50 ms
+Atraso do audio +50 ms
+Relación de aspecto
+Predeterminada
+Pantalla completa
+Facer captura
+Engadir ficheiro de subtítulos…
+Pista de subtítulos
+Atraso dos subtítulos −50 ms
+Atraso dos subtítulos +50 ms
+Lista de reprodución
+Sempre visible
+Idioma…
+Atallos de teclado
+Acerca de Tavrynexo Player
+Código fonte en GitHub
+Contactar co programador
+Baleirar a lista
+Fai clic para restablecer a velocidade
+Solta aquí un ficheiro de vídeo ou audio
+Abrir ficheiro
+Abrir URL
+{0} elemento(s) engadido(s)
+Retomado en {0}
+Non se pode reproducir este contido
+Volume {0}%
+Silenciado
+Velocidade {0}
+Repetición desactivada
+Repetir todo
+Repetir un
+Aleatorio activado
+Aleatorio desactivado
+Relación de aspecto: {0}
+Atraso do audio {0} ms
+Atraso dos subtítulos {0} ms
+Captura gardada
+Non se puido gardar a captura
+Pega unha ligazón directa ao contido (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Reproducir
+Cancelar
+Pechar
+Aceptar
+Un reprodutor multimedia moderno e rápido para Windows 10 e Windows 11.
+Motor de reprodución: LibVLC (VideoLAN), con licenza LGPL 2.1+.
+Programador
+Correo electrónico
+Código aberto
+Versión {0}
+Buscar…
+Ficheiros multimedia
+Todos os ficheiros
+Subtítulos
+Saltar 5 s (Maiús 30 s, Ctrl 60 s)
