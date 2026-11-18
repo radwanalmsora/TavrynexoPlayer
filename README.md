@@ -26,6 +26,9 @@ Built with C# / .NET 8 / WPF and the LibVLC engine (plays almost every video and
    - **TavrynexoPlayer-Portable** – ZIP, run `TavrynexoPlayer.exe` directly (no .NET install needed)
 4. To publish a Release page automatically, push a tag: `git tag v1.0.0 && git push origin v1.0.0`.
 
+## Microsoft Store (MSIX)
+The workflow also builds `TavrynexoPlayer_x.y.z.0_x64.msix` + `.msixupload` with the Store identity. See [STORE.md](STORE.md).
+
 ## Build locally (Windows)
 ```
 dotnet publish src/TavrynexoPlayer/TavrynexoPlayer.csproj -c Release -r win-x64 --self-contained true -o publish
