@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+         IgnorableNamespaces="uap rescap">
+
+  <Identity Name="RadwanAlmsora.TavrynexoPlayer"
+            Publisher="CN=DB86E487-92CC-4FB9-BDBC-F161416E3A4E"
+            Version="VERSION_PLACEHOLDER"
+            ProcessorArchitecture="x64" />
+
+  <Properties>
+    <DisplayName>Tavrynexo Player</DisplayName>
+    <PublisherDisplayName>Radwan Almsora</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="en-US" />
+    <Resource Language="en-GB" />
+    <Resource Language="ar" />
+    <Resource Language="bs" />
+    <Resource Language="ca" />
+    <Resource Language="cs" />
+    <Resource Language="da" />
+    <Resource Language="de" />
+    <Resource Language="es" />
+    <Resource Language="eu" />
+    <Resource Language="fr" />
+    <Resource Language="gl" />
+    <Resource Language="hr" />
+    <Resource Language="id" />
+    <Resource Language="it" />
+    <Resource Language="ko" />
+    <Resource Language="lt" />
+    <Resource Language="hu" />
+    <Resource Language="ms" />
+    <Resource Language="nl" />
+    <Resource Language="pl" />
+    <Resource Language="pt-PT" />
+    <Resource Language="pt-BR" />
+    <Resource Language="ro" />
+    <Resource Language="sk" />
+    <Resource Language="sl" />
+    <Resource Language="fi" />
+    <Resource Language="sv" />
+    <Resource Language="th" />
+    <Resource Language="tr" />
+    <Resource Language="vi" />
+    <Resource Language="be" />
+    <Resource Language="ru" />
+    <Resource Language="tt" />
+    <Resource Language="uk" />
+    <Resource Language="hy" />
+    <Resource Language="he" />
+    <Resource Language="bn" />
+    <Resource Language="zh-CN" />
+    <Resource Language="ja" />
+    <Resource Language="zh-TW" />
+  </Resources>
+
+  <Applications>
+    <Application Id="App" Executable="TavrynexoPlayer.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements DisplayName="Tavrynexo Player"
+                          Description="Modern media player for Windows 10 and Windows 11"
+                          BackgroundColor="#0B0D14"
+                          Square150x150Logo="Assets\Square150x150Logo.png"
+                          Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"
+                         Square71x71Logo="Assets\SmallTile.png"
+                         Square310x310Logo="Assets\LargeTile.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="tavrynexomedia">
+            <uap:DisplayName>Tavrynexo Player</uap:DisplayName>
+            <uap:SupportedFileTypes>
+            <uap:FileType>.mp4</uap:FileType>
+            <uap:FileType>.mkv</uap:FileType>
+            <uap:FileType>.avi</uap:FileType>
+            <uap:FileType>.mov</uap:FileType>
+            <uap:FileType>.wmv</uap:FileType>
+            <uap:FileType>.flv</uap:FileType>
+            <uap:FileType>.webm</uap:FileType>
+            <uap:FileType>.m4v</uap:FileType>
+            <uap:FileType>.mpg</uap:FileType>
+            <uap:FileType>.mpeg</uap:FileType>
+            <uap:FileType>.ts</uap:FileType>
+            <uap:FileType>.3gp</uap:FileType>
+            <uap:FileType>.mp3</uap:FileType>
+            <uap:FileType>.flac</uap:FileType>
+            <uap:FileType>.wav</uap:FileType>
+            <uap:FileType>.aac</uap:FileType>
+            <uap:FileType>.m4a</uap:FileType>
+            <uap:FileType>.ogg</uap:FileType>
+            <uap:FileType>.opus</uap:FileType>
+            <uap:FileType>.wma</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>
