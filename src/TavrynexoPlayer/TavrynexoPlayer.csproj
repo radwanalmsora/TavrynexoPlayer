@@ -15,10 +15,13 @@
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <SelfContained>true</SelfContained>
     <Version>1.0.0</Version>
-    <Company>Tavrynexo</Company>
+    <Company>Radwan Almsora</Company>
+    <Authors>Radwan Almsora</Authors>
+    <PackageProjectUrl>https://github.com/radwanalmsora/TavrynexoPlayer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/radwanalmsora/TavrynexoPlayer</RepositoryUrl>
     <Product>Tavrynexo Player</Product>
     <Description>Tavrynexo Player - Modern media player for Windows 10 and 11</Description>
-    <Copyright>Copyright (c) Tavrynexo</Copyright>
+    <Copyright>Copyright (c) Radwan Almsora</Copyright>
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
@@ -26,6 +29,10 @@
   <ItemGroup>
     <PackageReference Include="LibVLCSharp.WPF" Version="3.8.*" />
     <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Languages\*.json" LogicalName="Languages.%(Filename)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup>

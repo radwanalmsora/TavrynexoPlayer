@@ -80,12 +80,27 @@ public partial class MainWindow : Window
         _clickTimer.Tick += (_, _) => { _clickTimer.Stop(); if (_mode != 1) TogglePause(); };
 
         StateChanged += (_, _) => UpdateWindowState();
+        Loc.Instance.LanguageChanged += ApplyLanguage;
         Loaded += OnLoaded;
+    }
+
+    // The video host is a native "static" child window. Windows paints it with the system
+    // button-face colour (light grey / white) around the video, so answer WM_CTLCOLORSTATIC with black.
+    private IntPtr WndProcHook(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
+    {
+        if (msg == 0x0138) // WM_CTLCOLORSTATIC
+        {
+            Native.SetBkColor(wParam, 0);
+            handled = true;
+            return Native.GetStockObject(4); // BLACK_BRUSH
+        }
+        return IntPtr.Zero;
     }
 
     protected override void OnSourceInitialized(EventArgs e)
     {
         base.OnSourceInitialized(e);
+        HwndSource.FromHwnd(new WindowInteropHelper(this).Handle)?.AddHook(WndProcHook);
         SetRoundedCorners(true);
         try
         {
@@ -106,7 +121,7 @@ public partial class MainWindow : Window
         VideoView.MediaPlayer = _player;
 
         _player.EndReached += (_, _) => Dispatcher.BeginInvoke(new Action(OnEnded));
-        _player.EncounteredError += (_, _) => Dispatcher.BeginInvoke(new Action(() => ShowOsd("Cannot play this media")));
+        _player.EncounteredError += (_, _) => Dispatcher.BeginInvoke(new Action(() => ShowOsd(Loc.T("osd_error"))));
 
         VolumeSlider.Value = _settings.Volume;
         _player.Volume = _settings.Volume;
@@ -114,6 +129,7 @@ public partial class MainWindow : Window
         VolumeText.Text = $"{_settings.Volume}%";
         UpdateMuteIcon();
 
+        ApplyLanguage();
         if (_settings.ShowPlaylist) SetPlaylistVisible(true);
         _timer.Start();
 
@@ -207,7 +223,7 @@ public partial class MainWindow : Window
         {
             p.Time = _pendingSeekMs;
             t = _pendingSeekMs;
-            ShowOsd($"Resumed at {Fmt(t)}");
+            ShowOsd(Loc.F("osd_resumed", Fmt(t)));
             _pendingSeekMs = -1;
         }
 
@@ -266,7 +282,7 @@ public partial class MainWindow : Window
         foreach (var f in files) _playlist.Add(new PlaylistItem(f));
 
         if (!append || _index < 0) PlayIndex(first);
-        else ShowOsd($"Added {files.Count} item(s)");
+        else ShowOsd(Loc.F("osd_added", files.Count));
     }
 
     private void PlayIndex(int i)
@@ -391,7 +407,7 @@ public partial class MainWindow : Window
     private void AdjustVolume(int delta)
     {
         VolumeSlider.Value = Math.Clamp(VolumeSlider.Value + delta, 0, 100);
-        ShowOsd($"Volume {(int)VolumeSlider.Value}%");
+        ShowOsd(Loc.F("osd_volume", (int)VolumeSlider.Value));
     }
 
     private void SetSpeed(float rate)
@@ -399,7 +415,7 @@ public partial class MainWindow : Window
         _rate = Math.Clamp(rate, 0.25f, 4f);
         _player?.SetRate(_rate);
         SpeedButton.Content = _rate.ToString("0.0#", CultureInfo.InvariantCulture) + "×";
-        ShowOsd($"Speed {SpeedButton.Content}");
+        ShowOsd(Loc.F("osd_speed", SpeedButton.Content!));
     }
 
     private void StepSpeed(int dir)
@@ -414,14 +430,14 @@ public partial class MainWindow : Window
     {
         _settings.RepeatMode = (_settings.RepeatMode + 1) % 3;
         ApplyRepeatIcon();
-        ShowOsd(_settings.RepeatMode switch { 0 => "Repeat off", 1 => "Repeat all", _ => "Repeat one" });
+        ShowOsd(Loc.T(_settings.RepeatMode switch { 0 => "osd_repeat_off", 1 => "osd_repeat_all", _ => "osd_repeat_one" }));
     }
 
     private void ToggleShuffle()
     {
         _settings.Shuffle = !_settings.Shuffle;
         ShuffleButton.IsChecked = _settings.Shuffle;
-        ShowOsd(_settings.Shuffle ? "Shuffle on" : "Shuffle off");
+        ShowOsd(Loc.T(_settings.Shuffle ? "osd_shuffle_on" : "osd_shuffle_off"));
     }
 
     private void SetPlaylistVisible(bool visible)
@@ -599,9 +615,9 @@ public partial class MainWindow : Window
     {
         var dlg = new OpenFileDialog
         {
-            Title = "Open media",
+            Title = Loc.Plain("open_file"),
             Multiselect = true,
-            Filter = "Media files|" + string.Join(";", MediaExtensions.Select(x => "*" + x)) + "|All files|*.*"
+            Filter = Loc.T("dlg_media") + "|" + string.Join(";", MediaExtensions.Select(x => "*" + x)) + "|" + Loc.T("dlg_all") + "|*.*"
         };
         if (dlg.ShowDialog(this) == true) OpenPaths(dlg.FileNames, append: false);
     }
@@ -610,16 +626,16 @@ public partial class MainWindow : Window
     {
         var dlg = new OpenFileDialog
         {
-            Title = "Add to playlist",
+            Title = Loc.Plain("add_files"),
             Multiselect = true,
-            Filter = "Media files|" + string.Join(";", MediaExtensions.Select(x => "*" + x)) + "|All files|*.*"
+            Filter = Loc.T("dlg_media") + "|" + string.Join(";", MediaExtensions.Select(x => "*" + x)) + "|" + Loc.T("dlg_all") + "|*.*"
         };
         if (dlg.ShowDialog(this) == true) OpenPaths(dlg.FileNames, append: true);
     }
 
     private void OpenFolder_Click(object sender, RoutedEventArgs e)
     {
-        var dlg = new OpenFolderDialog { Title = "Open folder" };
+        var dlg = new OpenFolderDialog { Title = Loc.Plain("open_folder") };
         if (dlg.ShowDialog(this) == true) OpenPaths(new[] { dlg.FolderName }, append: false);
     }
 
@@ -635,7 +651,7 @@ public partial class MainWindow : Window
         RecentMenu.Items.Clear();
         if (_settings.Recent.Count == 0)
         {
-            RecentMenu.Items.Add(new MenuItem { Header = "(empty)", IsEnabled = false });
+            RecentMenu.Items.Add(new MenuItem { Header = Loc.T("empty"), IsEnabled = false });
             return;
         }
         foreach (var path in _settings.Recent.ToList())
@@ -649,7 +665,7 @@ public partial class MainWindow : Window
             RecentMenu.Items.Add(mi);
         }
         RecentMenu.Items.Add(new Separator());
-        var clear = new MenuItem { Header = "Clear recent" };
+        var clear = new MenuItem { Header = Loc.T("clear_recent") };
         clear.Click += (_, _) => _settings.Recent.Clear();
         RecentMenu.Items.Add(clear);
     }
@@ -717,7 +733,7 @@ public partial class MainWindow : Window
         _player.Mute = !_player.Mute;
         _settings.Muted = _player.Mute;
         UpdateMuteIcon();
-        ShowOsd(_player.Mute ? "Muted" : $"Volume {(int)VolumeSlider.Value}%");
+        ShowOsd(_player.Mute ? Loc.T("osd_muted") : Loc.F("osd_volume", (int)VolumeSlider.Value));
     }
 
     private void AudioDelayMinus_Click(object sender, RoutedEventArgs e) => ChangeAudioDelay(-50_000);
@@ -728,7 +744,7 @@ public partial class MainWindow : Window
         if (_player == null) return;
         long d = _player.AudioDelay + micro;
         _player.SetAudioDelay(d);
-        ShowOsd($"Audio delay {d / 1000} ms");
+        ShowOsd(Loc.F("osd_audio_delay", d / 1000));
     }
 
     private void AudioTrackMenu_Opened(object sender, RoutedEventArgs e)
@@ -739,7 +755,7 @@ public partial class MainWindow : Window
         var tracks = p?.AudioTrackDescription ?? Array.Empty<TrackDescription>();
         if (p == null || tracks.Length == 0)
         {
-            AudioTrackMenu.Items.Add(new MenuItem { Header = "(none)", IsEnabled = false });
+            AudioTrackMenu.Items.Add(new MenuItem { Header = Loc.T("none"), IsEnabled = false });
             return;
         }
         int current = p.AudioTrack;
@@ -747,7 +763,7 @@ public partial class MainWindow : Window
         {
             var id = t.Id;
             var mi = new MenuItem { Header = t.Name.Replace("_", "__"), IsCheckable = true, IsChecked = id == current };
-            mi.Click += (_, _) => { _player?.SetAudioTrack(id); ShowOsd("Audio track changed"); };
+            mi.Click += (_, _) => { _player?.SetAudioTrack(id); ShowOsd(Loc.T("audio_track")); };
             AudioTrackMenu.Items.Add(mi);
         }
     }
@@ -758,7 +774,7 @@ public partial class MainWindow : Window
         if (_player == null || sender is not MenuItem mi) return;
         var tag = mi.Tag as string;
         _player.AspectRatio = string.IsNullOrEmpty(tag) ? null : tag;
-        ShowOsd(string.IsNullOrEmpty(tag) ? "Aspect ratio: default" : $"Aspect ratio {tag}");
+        ShowOsd(Loc.F("osd_aspect", string.IsNullOrEmpty(tag) ? Loc.T("default") : tag!));
     }
 
     private void Fullscreen_Click(object sender, RoutedEventArgs e) => ToggleFullscreen();
@@ -771,9 +787,9 @@ public partial class MainWindow : Window
             var dir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures), "Tavrynexo");
             Directory.CreateDirectory(dir);
             var file = Path.Combine(dir, $"Tavrynexo_{DateTime.Now:yyyyMMdd_HHmmss}.png");
-            ShowOsd(_player.TakeSnapshot(0, file, 0, 0) ? "Snapshot saved to Pictures\\Tavrynexo" : "Snapshot failed");
+            ShowOsd(Loc.T(_player.TakeSnapshot(0, file, 0, 0) ? "osd_snap_ok" : "osd_snap_fail"));
         }
-        catch { ShowOsd("Snapshot failed"); }
+        catch { ShowOsd(Loc.T("osd_snap_fail")); }
     }
 
     // --------------------------------------------------------------- subtitles
@@ -782,13 +798,13 @@ public partial class MainWindow : Window
         if (_player == null) return;
         var dlg = new OpenFileDialog
         {
-            Title = "Add subtitle",
-            Filter = "Subtitles|*.srt;*.ass;*.ssa;*.sub;*.vtt|All files|*.*"
+            Title = Loc.Plain("add_sub"),
+            Filter = Loc.T("dlg_subs") + "|*.srt;*.ass;*.ssa;*.sub;*.vtt|" + Loc.T("dlg_all") + "|*.*"
         };
         if (dlg.ShowDialog(this) == true)
         {
             _player.AddSlave(MediaSlaveType.Subtitle, new Uri(dlg.FileName).AbsoluteUri, true);
-            ShowOsd("Subtitle loaded");
+            ShowOsd(Loc.T("m_subtitle"));
         }
     }
 
@@ -800,7 +816,7 @@ public partial class MainWindow : Window
         var tracks = p?.SpuDescription ?? Array.Empty<TrackDescription>();
         if (p == null || tracks.Length == 0)
         {
-            SubtitleTrackMenu.Items.Add(new MenuItem { Header = "(none)", IsEnabled = false });
+            SubtitleTrackMenu.Items.Add(new MenuItem { Header = Loc.T("none"), IsEnabled = false });
             return;
         }
         int current = p.Spu;
@@ -808,7 +824,7 @@ public partial class MainWindow : Window
         {
             var id = t.Id;
             var mi = new MenuItem { Header = t.Name.Replace("_", "__"), IsCheckable = true, IsChecked = id == current };
-            mi.Click += (_, _) => { _player?.SetSpu(id); ShowOsd("Subtitle track changed"); };
+            mi.Click += (_, _) => { _player?.SetSpu(id); ShowOsd(Loc.T("sub_track")); };
             SubtitleTrackMenu.Items.Add(mi);
         }
     }
@@ -821,7 +837,7 @@ public partial class MainWindow : Window
         if (_player == null) return;
         long d = _player.SpuDelay + micro;
         _player.SetSpuDelay(d);
-        ShowOsd($"Subtitle delay {d / 1000} ms");
+        ShowOsd(Loc.F("osd_sub_delay", d / 1000));
     }
 
     // -------------------------------------------------------------- view/help
@@ -850,30 +866,48 @@ public partial class MainWindow : Window
 
     private void Shortcuts_Click(object sender, RoutedEventArgs e)
     {
-        const string body =
-            "Space\t\tPlay / Pause\n" +
-            "← / →\t\tSeek 5 s  (Shift 30 s, Ctrl 60 s)\n" +
-            "↑ / ↓\t\tVolume\n" +
-            "M\t\tMute\n" +
-            "F / F11\t\tFullscreen  (Esc to exit)\n" +
-            "N / P\t\tNext / Previous\n" +
-            "[  ]\t\tSlower / Faster  (Backspace resets)\n" +
-            "R / H\t\tRepeat / Shuffle\n" +
-            "Ctrl+O\t\tOpen file\n" +
-            "Ctrl+Shift+O\tAdd to playlist\n" +
-            "Ctrl+U\t\tOpen network stream\n" +
-            "Ctrl+L\t\tPlaylist\n" +
-            "Ctrl+S\t\tSnapshot";
-        new InfoDialog("Keyboard Shortcuts", "Tavrynexo Player", body) { Owner = this }.ShowDialog();
+        string L(string k) => Loc.T(k).TrimEnd('…');
+        var body =
+            $"Space  —  {L("play_pause")}\n" +
+            $"← / →  —  {L("sc_seek")}\n" +
+            $"↑ / ↓  —  {L("vol_up")} / {L("vol_down")}\n" +
+            $"M  —  {L("mute")}\n" +
+            $"F / F11  —  {L("fullscreen")}  (Esc)\n" +
+            $"N / P  —  {L("next")} / {L("previous")}\n" +
+            $"[ / ]  —  {L("speed")}  (Backspace)\n" +
+            $"R / H  —  {L("repeat")} / {L("shuffle")}\n" +
+            $"Ctrl+O  —  {L("open_file")}\n" +
+            $"Ctrl+Shift+O  —  {L("add_files")}\n" +
+            $"Ctrl+U  —  {L("open_url")}\n" +
+            $"Ctrl+L  —  {L("playlist")}\n" +
+            $"Ctrl+S  —  {L("snapshot")}";
+        new InfoDialog(L("shortcuts"), "Tavrynexo Player", body) { Owner = this }.ShowDialog();
     }
 
-    private void About_Click(object sender, RoutedEventArgs e)
+    private void About_Click(object sender, RoutedEventArgs e) => new AboutDialog { Owner = this }.ShowDialog();
+
+    private void GitHub_Click(object sender, RoutedEventArgs e) => AboutDialog.OpenLink("https://github.com/radwanalmsora/TavrynexoPlayer");
+
+    private void Contact_Click(object sender, RoutedEventArgs e) => AboutDialog.OpenLink("mailto:retwan.tech@gmail.com");
+
+    private void Language_Click(object sender, RoutedEventArgs e)
     {
-        var v = typeof(MainWindow).Assembly.GetName().Version;
-        new InfoDialog("Tavrynexo Player", $"Version {v?.Major}.{v?.Minor}.{v?.Build}",
-            "A modern, fast media player for Windows 10 and Windows 11.\n\n" +
-            "Playback engine: LibVLC (VideoLAN), licensed under LGPL 2.1+.\n" +
-            "© Tavrynexo. All rights reserved.") { Owner = this }.ShowDialog();
+        var dlg = new LanguageDialog { Owner = this };
+        if (dlg.ShowDialog() == true && !string.IsNullOrEmpty(dlg.SelectedCode))
+        {
+            _settings.Language = dlg.SelectedCode;
+            Loc.Instance.SetLanguage(dlg.SelectedCode);
+            SettingsService.Save(_settings);
+        }
+    }
+
+    private void ApplyLanguage()
+    {
+        var dir = Loc.Instance.IsRtl ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+        MainMenu.FlowDirection = dir;
+        PlaylistPanel.FlowDirection = dir;
+        Overlay.FlowDirection = dir;
+        OsdText.FlowDirection = dir;
     }
 
     // ------------------------------------------------------------------ native
@@ -889,6 +923,8 @@ public partial class MainWindow : Window
         [DllImport("user32.dll")] public static extern bool GetMonitorInfo(IntPtr hMonitor, ref MONITORINFO lpmi);
         [DllImport("user32.dll")]
         public static extern bool SetWindowPos(IntPtr hWnd, IntPtr after, int x, int y, int cx, int cy, uint flags);
+        [DllImport("gdi32.dll")] public static extern int SetBkColor(IntPtr hdc, int color);
+        [DllImport("gdi32.dll")] public static extern IntPtr GetStockObject(int index);
         [DllImport("dwmapi.dll")]
         public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int value, int size);
     }

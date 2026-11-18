@@ -33,9 +33,6 @@
     <FontFamily x:Key="UiFont">Segoe UI Variable Text, Segoe UI</FontFamily>
     <FontFamily x:Key="IconFont">Segoe Fluent Icons, Segoe MDL2 Assets</FontFamily>
 
-    <Style TargetType="TextBlock">
-        <Setter Property="FontFamily" Value="{StaticResource UiFont}" />
-    </Style>
 
     <!-- ============ Icon button ============ -->
     <Style x:Key="IconButton" TargetType="Button">

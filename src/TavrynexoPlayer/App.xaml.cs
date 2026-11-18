@@ -18,6 +18,9 @@ public partial class App : Application
             return;
         }
 
+        var settings = Services.SettingsService.Load();
+        Services.Loc.Instance.SetLanguage(string.IsNullOrEmpty(settings.Language) ? Services.Loc.DetectSystemLanguage() : settings.Language);
+
         Core.Initialize();
 
         if (e.Args.Length > 0) StartupFile = e.Args[0];

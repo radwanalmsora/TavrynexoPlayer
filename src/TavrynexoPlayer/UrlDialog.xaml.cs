@@ -1,5 +1,6 @@
 using System.Windows;
 using System.Windows.Input;
+using TavrynexoPlayer.Services;
 
 namespace TavrynexoPlayer;
 
@@ -8,6 +9,11 @@ public partial class UrlDialog : Window
     public UrlDialog()
     {
         InitializeComponent();
+        FlowDirection = Loc.Instance.IsRtl ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+        Title = TitleText.Text = Loc.Plain("open_url");
+        HintText.Text = Loc.T("url_hint");
+        CancelBtn.Content = Loc.T("btn_cancel");
+        PlayBtn.Content = Loc.T("btn_play");
         try
         {
             if (Clipboard.ContainsText())

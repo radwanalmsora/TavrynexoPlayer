@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent"
         SizeToContent="Height" Width="520" ShowInTaskbar="False" WindowStartupLocation="CenterOwner"
-        Title="Tavrynexo Player">
+        FontFamily="{StaticResource UiFont}" Title="Tavrynexo Player">
     <Border Margin="18" Background="{StaticResource SurfaceBrush}" BorderBrush="{StaticResource BorderBrush2}"
             BorderThickness="1" CornerRadius="14" MouseLeftButtonDown="Header_MouseDown">
         <Border.Effect>
@@ -19,7 +19,7 @@
             </StackPanel>
             <TextBlock x:Name="BodyText" Foreground="{StaticResource TextBrush}" FontSize="13" TextWrapping="Wrap"
                        LineHeight="22" Margin="0,22,0,0" />
-            <Button Style="{StaticResource PrimaryButton}" Content="Close" IsDefault="True" IsCancel="True"
+            <Button x:Name="CloseBtn" Style="{StaticResource PrimaryButton}" IsDefault="True" IsCancel="True"
                     HorizontalAlignment="Right" Margin="0,24,0,0" Click="Close_Click" />
         </StackPanel>
     </Border>
