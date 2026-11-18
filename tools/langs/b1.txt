@@ -1,0 +1,516 @@
+@en
+Media
+Playback
+Audio
+Video
+Subtitle
+View
+Settings
+Help
+Open File…
+Add Files to Playlist…
+Open Folder…
+Open Network Stream…
+Recent Media
+(empty)
+Clear recent
+Exit
+Play / Pause
+Stop
+Previous
+Next
+Jump Forward 10 s
+Jump Backward 10 s
+Speed
+Normal
+Repeat
+Shuffle
+Audio Track
+(none)
+Volume Up
+Volume Down
+Mute
+Audio Delay −50 ms
+Audio Delay +50 ms
+Aspect Ratio
+Default
+Fullscreen
+Take Snapshot
+Add Subtitle File…
+Subtitle Track
+Subtitle Delay −50 ms
+Subtitle Delay +50 ms
+Playlist
+Always on Top
+Language…
+Keyboard Shortcuts
+About Tavrynexo Player
+Source Code on GitHub
+Contact the Developer
+Clear playlist
+Click to reset speed
+Drop a video or audio file here
+Open File
+Open URL
+Added {0} item(s)
+Resumed at {0}
+Cannot play this media
+Volume {0}%
+Muted
+Speed {0}
+Repeat off
+Repeat all
+Repeat one
+Shuffle on
+Shuffle off
+Aspect ratio: {0}
+Audio delay {0} ms
+Subtitle delay {0} ms
+Snapshot saved
+Snapshot failed
+Paste a direct media link (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Play
+Cancel
+Close
+OK
+A modern, fast media player for Windows 10 and Windows 11.
+Playback engine: LibVLC (VideoLAN), licensed under LGPL 2.1+.
+Developer
+Email
+Open source
+Version {0}
+Search…
+Media files
+All files
+Subtitles
+Seek 5 s (Shift 30 s, Ctrl 60 s)
+@ar
+الوسائط
+التشغيل
+الصوت
+الفيديو
+الترجمة
+عرض
+الإعدادات
+مساعدة
+فتح ملف…
+إضافة ملفات إلى القائمة…
+فتح مجلد…
+فتح بث شبكي…
+الملفات الأخيرة
+(فارغ)
+مسح الأخيرة
+خروج
+تشغيل / إيقاف مؤقت
+إيقاف
+السابق
+التالي
+تقديم 10 ثوانٍ
+إرجاع 10 ثوانٍ
+السرعة
+عادية
+تكرار
+تشغيل عشوائي
+المسار الصوتي
+(لا يوجد)
+رفع الصوت
+خفض الصوت
+كتم الصوت
+تأخير الصوت −50 مللي ثانية
+تأخير الصوت +50 مللي ثانية
+نسبة العرض
+الافتراضي
+ملء الشاشة
+التقاط صورة
+إضافة ملف ترجمة…
+مسار الترجمة
+تأخير الترجمة −50 مللي ثانية
+تأخير الترجمة +50 مللي ثانية
+قائمة التشغيل
+دائماً في المقدمة
+اللغة…
+اختصارات لوحة المفاتيح
+حول Tavrynexo Player
+الشيفرة المصدرية على GitHub
+التواصل مع المطوّر
+مسح القائمة
+انقر لإعادة السرعة
+أفلت ملف فيديو أو صوت هنا
+فتح ملف
+فتح رابط
+تمت إضافة {0} عنصر
+تم الاستئناف من {0}
+تعذر تشغيل هذا الملف
+مستوى الصوت {0}%
+تم الكتم
+السرعة {0}
+التكرار متوقف
+تكرار الكل
+تكرار الحالي
+التشغيل العشوائي مفعّل
+التشغيل العشوائي متوقف
+نسبة العرض: {0}
+تأخير الصوت {0} مللي ثانية
+تأخير الترجمة {0} مللي ثانية
+تم حفظ الصورة
+فشل حفظ الصورة
+الصق رابط وسائط مباشر (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+تشغيل
+إلغاء
+إغلاق
+موافق
+مشغّل وسائط حديث وسريع لنظامي Windows 10 وWindows 11.
+محرك التشغيل: LibVLC (VideoLAN)، برخصة LGPL 2.1+.
+المطوّر
+البريد الإلكتروني
+مفتوح المصدر
+الإصدار {0}
+بحث…
+ملفات الوسائط
+كل الملفات
+الترجمات
+تقديم 5 ث (Shift ‏30 ث، Ctrl ‏60 ث)
+@de
+Medien
+Wiedergabe
+Audio
+Video
+Untertitel
+Ansicht
+Einstellungen
+Hilfe
+Datei öffnen…
+Dateien zur Wiedergabeliste hinzufügen…
+Ordner öffnen…
+Netzwerkstream öffnen…
+Zuletzt geöffnet
+(leer)
+Liste leeren
+Beenden
+Wiedergabe / Pause
+Stopp
+Zurück
+Weiter
+10 s vorspulen
+10 s zurückspulen
+Geschwindigkeit
+Normal
+Wiederholen
+Zufällig
+Audiospur
+(keine)
+Lauter
+Leiser
+Stummschalten
+Audioverzögerung −50 ms
+Audioverzögerung +50 ms
+Seitenverhältnis
+Standard
+Vollbild
+Schnappschuss aufnehmen
+Untertiteldatei hinzufügen…
+Untertitelspur
+Untertitelverzögerung −50 ms
+Untertitelverzögerung +50 ms
+Wiedergabeliste
+Immer im Vordergrund
+Sprache…
+Tastenkürzel
+Über Tavrynexo Player
+Quellcode auf GitHub
+Entwickler kontaktieren
+Wiedergabeliste leeren
+Klicken, um die Geschwindigkeit zurückzusetzen
+Video- oder Audiodatei hier ablegen
+Datei öffnen
+URL öffnen
+{0} Element(e) hinzugefügt
+Fortgesetzt bei {0}
+Dieses Medium kann nicht abgespielt werden
+Lautstärke {0}%
+Stumm
+Geschwindigkeit {0}
+Wiederholung aus
+Alle wiederholen
+Titel wiederholen
+Zufallswiedergabe an
+Zufallswiedergabe aus
+Seitenverhältnis: {0}
+Audioverzögerung {0} ms
+Untertitelverzögerung {0} ms
+Schnappschuss gespeichert
+Schnappschuss fehlgeschlagen
+Direkten Medienlink einfügen (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Abspielen
+Abbrechen
+Schließen
+OK
+Ein moderner, schneller Mediaplayer für Windows 10 und Windows 11.
+Wiedergabe-Engine: LibVLC (VideoLAN), lizenziert unter LGPL 2.1+.
+Entwickler
+E-Mail
+Open Source
+Version {0}
+Suchen…
+Mediendateien
+Alle Dateien
+Untertitel
+5 s springen (Umschalt 30 s, Strg 60 s)
+@fr
+Média
+Lecture
+Audio
+Vidéo
+Sous-titres
+Affichage
+Paramètres
+Aide
+Ouvrir un fichier…
+Ajouter des fichiers à la liste…
+Ouvrir un dossier…
+Ouvrir un flux réseau…
+Médias récents
+(vide)
+Effacer les récents
+Quitter
+Lecture / Pause
+Arrêt
+Précédent
+Suivant
+Avancer de 10 s
+Reculer de 10 s
+Vitesse
+Normale
+Répéter
+Aléatoire
+Piste audio
+(aucune)
+Volume +
+Volume −
+Muet
+Décalage audio −50 ms
+Décalage audio +50 ms
+Format d'image
+Par défaut
+Plein écran
+Prendre une capture
+Ajouter un fichier de sous-titres…
+Piste de sous-titres
+Décalage des sous-titres −50 ms
+Décalage des sous-titres +50 ms
+Liste de lecture
+Toujours au premier plan
+Langue…
+Raccourcis clavier
+À propos de Tavrynexo Player
+Code source sur GitHub
+Contacter le développeur
+Vider la liste
+Cliquez pour réinitialiser la vitesse
+Déposez un fichier vidéo ou audio ici
+Ouvrir un fichier
+Ouvrir une URL
+{0} élément(s) ajouté(s)
+Reprise à {0}
+Impossible de lire ce média
+Volume {0} %
+Muet
+Vitesse {0}
+Répétition désactivée
+Tout répéter
+Répéter le titre
+Lecture aléatoire activée
+Lecture aléatoire désactivée
+Format d'image : {0}
+Décalage audio {0} ms
+Décalage des sous-titres {0} ms
+Capture enregistrée
+Échec de la capture
+Collez un lien média direct (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Lire
+Annuler
+Fermer
+OK
+Un lecteur multimédia moderne et rapide pour Windows 10 et Windows 11.
+Moteur de lecture : LibVLC (VideoLAN), sous licence LGPL 2.1+.
+Développeur
+E-mail
+Open source
+Version {0}
+Rechercher…
+Fichiers multimédias
+Tous les fichiers
+Sous-titres
+Avance 5 s (Maj 30 s, Ctrl 60 s)
+@es
+Medios
+Reproducción
+Audio
+Vídeo
+Subtítulos
+Ver
+Configuración
+Ayuda
+Abrir archivo…
+Añadir archivos a la lista…
+Abrir carpeta…
+Abrir transmisión de red…
+Medios recientes
+(vacío)
+Borrar recientes
+Salir
+Reproducir / Pausar
+Detener
+Anterior
+Siguiente
+Avanzar 10 s
+Retroceder 10 s
+Velocidad
+Normal
+Repetir
+Aleatorio
+Pista de audio
+(ninguna)
+Subir volumen
+Bajar volumen
+Silenciar
+Retraso de audio −50 ms
+Retraso de audio +50 ms
+Relación de aspecto
+Predeterminada
+Pantalla completa
+Tomar captura
+Añadir archivo de subtítulos…
+Pista de subtítulos
+Retraso de subtítulos −50 ms
+Retraso de subtítulos +50 ms
+Lista de reproducción
+Siempre visible
+Idioma…
+Atajos de teclado
+Acerca de Tavrynexo Player
+Código fuente en GitHub
+Contactar con el desarrollador
+Vaciar lista
+Haz clic para restablecer la velocidad
+Suelta aquí un archivo de vídeo o audio
+Abrir archivo
+Abrir URL
+{0} elemento(s) añadido(s)
+Reanudado en {0}
+No se puede reproducir este medio
+Volumen {0}%
+Silenciado
+Velocidad {0}
+Repetición desactivada
+Repetir todo
+Repetir uno
+Aleatorio activado
+Aleatorio desactivado
+Relación de aspecto: {0}
+Retraso de audio {0} ms
+Retraso de subtítulos {0} ms
+Captura guardada
+Error al guardar la captura
+Pega un enlace directo a un medio (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Reproducir
+Cancelar
+Cerrar
+Aceptar
+Un reproductor multimedia moderno y rápido para Windows 10 y Windows 11.
+Motor de reproducción: LibVLC (VideoLAN), con licencia LGPL 2.1+.
+Desarrollador
+Correo electrónico
+Código abierto
+Versión {0}
+Buscar…
+Archivos multimedia
+Todos los archivos
+Subtítulos
+Saltar 5 s (Mayús 30 s, Ctrl 60 s)
+@it
+Media
+Riproduzione
+Audio
+Video
+Sottotitoli
+Visualizza
+Impostazioni
+Aiuto
+Apri file…
+Aggiungi file alla playlist…
+Apri cartella…
+Apri flusso di rete…
+File recenti
+(vuoto)
+Cancella recenti
+Esci
+Riproduci / Pausa
+Stop
+Precedente
+Successivo
+Avanti di 10 s
+Indietro di 10 s
+Velocità
+Normale
+Ripeti
+Casuale
+Traccia audio
+(nessuna)
+Alza volume
+Abbassa volume
+Muto
+Ritardo audio −50 ms
+Ritardo audio +50 ms
+Proporzioni
+Predefinite
+Schermo intero
+Cattura schermata
+Aggiungi file sottotitoli…
+Traccia sottotitoli
+Ritardo sottotitoli −50 ms
+Ritardo sottotitoli +50 ms
+Playlist
+Sempre in primo piano
+Lingua…
+Scorciatoie da tastiera
+Informazioni su Tavrynexo Player
+Codice sorgente su GitHub
+Contatta lo sviluppatore
+Svuota playlist
+Clic per reimpostare la velocità
+Trascina qui un file video o audio
+Apri file
+Apri URL
+{0} elemento/i aggiunto/i
+Ripresa a {0}
+Impossibile riprodurre questo contenuto
+Volume {0}%
+Muto
+Velocità {0}
+Ripetizione disattivata
+Ripeti tutto
+Ripeti uno
+Casuale attivo
+Casuale disattivato
+Proporzioni: {0}
+Ritardo audio {0} ms
+Ritardo sottotitoli {0} ms
+Schermata salvata
+Salvataggio non riuscito
+Incolla un link diretto al contenuto (HTTP, HTTPS, RTSP, RTMP, M3U8…)
+Riproduci
+Annulla
+Chiudi
+OK
+Un lettore multimediale moderno e veloce per Windows 10 e Windows 11.
+Motore di riproduzione: LibVLC (VideoLAN), con licenza LGPL 2.1+.
+Sviluppatore
+Email
+Open source
+Versione {0}
+Cerca…
+File multimediali
+Tutti i file
+Sottotitoli
+Salta 5 s (Maiusc 30 s, Ctrl 60 s)
