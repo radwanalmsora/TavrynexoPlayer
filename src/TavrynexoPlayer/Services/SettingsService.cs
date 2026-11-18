@@ -10,6 +10,7 @@ public sealed class AppSettings
     public bool Shuffle { get; set; }
     public int RepeatMode { get; set; }          // 0 off, 1 all, 2 one
     public bool ShowPlaylist { get; set; }
+    public string Language { get; set; } = "";
     public List<string> Recent { get; set; } = new();
     public Dictionary<string, long> Positions { get; set; } = new();
 }
