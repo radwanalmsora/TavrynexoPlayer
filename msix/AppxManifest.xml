@@ -10,7 +10,7 @@
             ProcessorArchitecture="x64" />
 
   <Properties>
-    <DisplayName>Tavrynexo Player</DisplayName>
+    <DisplayName>TavrynexoPlayer</DisplayName>
     <PublisherDisplayName>Radwan Almsora</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
