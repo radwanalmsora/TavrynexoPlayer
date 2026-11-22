@@ -51,5 +51,7 @@ Run `python branding/make_brand.py` (needs Pillow + numpy) to regenerate every i
 ## Translations
 Edit `tools/langs/b*.txt` (one line per string, same order as `tools/langs/keys.txt`) and run `python tools/build_langs.py`.
 
+<p align="center"><img src="لقطة الشاشة 2026-11-18 031239.png" width="520" alt="Tavrynexo Player"></p>
+
 ## License
 MIT (see `LICENSE`). Uses LibVLC (LGPL-2.1+), see `THIRD-PARTY-NOTICES.md`.
