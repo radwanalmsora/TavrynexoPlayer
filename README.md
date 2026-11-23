@@ -1,6 +1,6 @@
 <p align="center"><img src="branding/lockup-dark.png" width="520" alt="Tavrynexo Player"></p>
 
-# Tavrynexo Player
+# Tavrynexo Player.
 
 Modern desktop media player for **Windows 10 (2004+) and Windows 11** only.
 Built with C# / .NET 8 / WPF and the LibVLC engine (plays almost every video and audio format).
